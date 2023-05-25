@@ -17,7 +17,7 @@ public class SomaAlturas {
 		int[] idade = new int[n];
 		double[] altura = new double[n];
 		float sum = 0;
-		int menorQ = 0;
+		float menorQ = 0;
 		for(int i = 0;i<n;i++) {
 			System.out.println("Dadas da " + (1+i) + "a pessoa.\n");
 			System.out.println("Digite o nome:");
@@ -27,15 +27,16 @@ public class SomaAlturas {
 			System.out.println("Digite a altura:\n");
 			altura[i] = sc.nextDouble();
 			sum += altura[i];
-			if(idade[i] < 16) {
-				menorQ += 1;
-			}
+			if (idade[i] < 16) {
+				menorQ++;
 		}
+		}
+		
 		
 		float avg = sum/n;
 		float percent = (menorQ/n)*100;
 	
-		System.out.println("Altura media: " + sum/n);
+		System.out.println("Altura media: " + avg);
 		System.out.println("Pessoas com menos de 16 anos " + percent + "%");
 		System.out.println("Nome das Pessoas \n");
 		for(int i=0; i<n;i++) {
