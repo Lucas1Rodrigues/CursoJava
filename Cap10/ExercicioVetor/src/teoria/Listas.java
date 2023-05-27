@@ -23,7 +23,7 @@ public class Listas {
 		}
 		
 		System.out.println("----------------------");
-		list.removeIf(x -> x.charAt(0) == 'L');
+		list.removeIf(x -> x.charAt(0) == 'D');
 		for (String string : list) {
 			System.out.println(string);
 		}

@@ -13,7 +13,7 @@ public class ExercicioPensionato {
 		String[] email = new String[n];
 		boolean[] rented = new boolean[n];
 		
-		for (int i = 0; i < n; i++) {
+		for (int i = 1; i <= n; i++) {
 			System.out.println("Rent #" + i);
 			System.out.println("Nome: " );
 			name[i] = sc.next();
@@ -25,9 +25,9 @@ public class ExercicioPensionato {
 				
 		}
 		System.out.println("Busy rooms: ");
-		for (int i = 0; i < n; i++) {
+		for (int i = 1; i <= n; i++) {
 			if (name[i] != null) {
-				System.out.print(room[i] + ": " + name[i] + ", " + email[i]);
+				System.out.println(room[i] + ": " + name[i] + ", " + email[i]);
 			}
 			
 		}
