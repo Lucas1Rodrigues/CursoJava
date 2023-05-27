@@ -1,22 +1,21 @@
 package exercicioListas;
 
 public class Funcionario {
-	private String id;
+	private int id;
 	private String nome;
 	private float salario;
-	private int percent;
+	private int percent = 0;
 	
-	public void aumentarEmDez(String id, int percent) {
-		this.percent = percent/100;
+	public void aumentarEmDez(int id, int percent) {
 		if(this.id == id) {
-			this.salario = (float) (this.salario + (this.salario * percent));
+			this.salario += this.salario * percent/100;
 		}else {
 			System.out.println("Id informado nao existe, refaça a operação.");
 		}
 	}
 	
 
-	public Funcionario(String id, String nome, float salario) {
+	public Funcionario(int id, String nome, float salario) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -24,11 +23,11 @@ public class Funcionario {
 	}
 
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
