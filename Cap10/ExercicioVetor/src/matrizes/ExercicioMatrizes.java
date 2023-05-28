@@ -27,36 +27,24 @@ public class ExercicioMatrizes {
 				for (int j = 0; j < mat[i].length; j++) {
 					if(x == mat[i][j]) {
 						System.out.println("Posicao do numero: [" + i + "] [" + j + "]");
-						if (mat[i-1][j] == null) {
-							System.out.println();
-						}else {
+						if (i > 0) {
 							System.out.println("Acima: " + mat[i-1][j]);
-							
 						}
-						
-						if(mat[i+1][j] == null) {
-							System.out.println();
-						}else {
+						if(i < mat[i].length) {
 							System.out.println("abaixo: " + mat[i+1][j]);
 						}
-						
-						if (mat[i][j-1] == null) {
-							System.out.println();	
-						}else {
+						if (j > 0) {
 							System.out.println("Esquerda: " + mat[i][j-1]);
 						}
-						
-						if (mat[i][j+1] == null) {
-							System.out.println();
-						}else {
+						if (j > mat[i].length - 1) {
 							System.out.println("Direita: " + mat[i][j+1]);
-							
 						}
 						
 					}
 				}
 			}
 		
+			sc.close();
 		}
 
 	}
