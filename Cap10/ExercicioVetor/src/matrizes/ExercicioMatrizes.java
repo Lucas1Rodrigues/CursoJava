@@ -12,7 +12,7 @@ public class ExercicioMatrizes {
 			System.out.println("Digite o valor da linha e coluna (nessa ordem): ");
 			int l = sc.nextInt();
 			int c = sc.nextInt();
-			int[][] mat = new int[l][c];
+			Integer[][] mat = new Integer[l][c];
 			
 			System.out.println("Matriz: ");
 			for (int i = 0; i < l; i++) {
@@ -26,14 +26,37 @@ public class ExercicioMatrizes {
 			for (int i = 0; i < mat.length; i++) {
 				for (int j = 0; j < mat[i].length; j++) {
 					if(x == mat[i][j]) {
-						System.out.println("Acima: " + mat[i-1][l]);
-						System.out.println("abaixo: " + mat[i+1][l]);
-						System.out.println("Esquerda: " + mat[i][l-1]);
-						System.out.println("Direita: " + mat[i][l+1]);
+						System.out.println("Posicao do numero: [" + i + "] [" + j + "]");
+						if (mat[i-1][j] == null) {
+							System.out.println();
+						}else {
+							System.out.println("Acima: " + mat[i-1][j]);
+							
+						}
+						
+						if(mat[i+1][j] == null) {
+							System.out.println();
+						}else {
+							System.out.println("abaixo: " + mat[i+1][j]);
+						}
+						
+						if (mat[i][j-1] == null) {
+							System.out.println();	
+						}else {
+							System.out.println("Esquerda: " + mat[i][j-1]);
+						}
+						
+						if (mat[i][j+1] == null) {
+							System.out.println();
+						}else {
+							System.out.println("Direita: " + mat[i][j+1]);
+							
+						}
+						
 					}
+				}
 			}
-		}
 		
-	}
+		}
 
-}
+	}
