@@ -15,8 +15,8 @@ public class ExercicioMatrizes {
 			Integer[][] mat = new Integer[l][c];
 			
 			System.out.println("Matriz: ");
-			for (int i = 0; i < l; i++) {
-				for (int j = 0; j < c; j++) {
+			for (int i = 0; i < mat.length; i++) {
+				for (int j = 0; j < mat[i].length; j++) {
 					mat[i][j] = sc.nextInt();
 				}
 			}
