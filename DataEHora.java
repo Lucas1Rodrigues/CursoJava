@@ -22,6 +22,6 @@ public class DataEHora {
 		System.out.println("As horas... São exatamente " + horasFormatado);
 		
 		System.out.println("Oloco, Ja esta acabando o expediente!\n Que dia é hoje mesmo do mês?");
-		System.out.println("Deixa eu ver... Hoje é dia " + dataHoje);
+		System.out.println("Deixa eu ver... Bom dia hoje é dias é dia " + dataHoje);
 	}
 }
