@@ -1,16 +1,23 @@
 package entities;
 
+import java.util.Date;
+
 public class OrderItem {
 	private int quantity;
 	private Double price;
-	private String name;
+	private Product product;
 	
-	public OrderItem(int quantity, Double price, String name) {
+	public OrderItem(int quantity, Double price, Product product) {
 		this.quantity = quantity;
 		this.price = price;
-		this.name = name;
+		this.product = product;
 	}
-
+	
+	public Double subTotal(int quantity, Double price) {
+		this.quantity = quantity;
+		this.price = price;
+		return quantity*price;
+	}
 
 	public int getQuantity() {
 		return quantity;
@@ -28,16 +35,18 @@ public class OrderItem {
 		this.price = price;
 	}
 
-
-	public String getName() {
-		return name;
+	
+	public Product getProduct() {
+		return product;
 	}
 
 
-	public void setName(String name) {
-		this.name = name;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 
+
+	
 	
 	
 }

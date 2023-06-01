@@ -11,13 +11,11 @@ public class Order {
 	private Client client;
 	
 	private List<OrderItem> orderItem = new ArrayList<>();
-	
 	public Order() {
 		
 	}
 
 	public Order(Date moment, OrderStatus status) {
-		super();
 		this.moment = moment;
 		this.status = status;
 	}
@@ -26,8 +24,8 @@ public class Order {
 		return moment;
 	}
 
-	public void setMoment(Date moment) {
-		this.moment = moment;
+	public void setMoment(Date l) {
+		this.moment = l;
 	}
 
 	public OrderStatus getStatus() {
@@ -38,6 +36,28 @@ public class Order {
 		this.status = status;
 	}
 	
+	public void addOrderItem(OrderItem oI) {
+		orderItem.add(oI);
+	}
+	
+	public void removeOrderItem(OrderItem order) {
+		orderItem.remove(order);
+	}
+
+	
+	public String toString() {
+		Date date = new Date();
+		StringBuilder sb = new StringBuilder();
+		sb.append("ORDER SUMMARY: \n");
+		sb.append("Order moment: " + date.getTime()); 
+		sb.append("Order status: " + status.PROCESSING + "\n");
+		sb.append("Client: " + client.toString());
+		sb.append("Order items:\n");
+		for (OrderItem o : orderItem) {
+			sb.append(o.getProduct());
+		}
+		return sb.toString();
+	}
 	
 }
 
