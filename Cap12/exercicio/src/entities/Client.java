@@ -5,13 +5,13 @@ import java.util.Date;
 public class Client {
 	private String name;
 	private String email;
-	private String birthDate;
+	private Date birthDate;
 	
 	public Client() {
 		
 	}
 
-	public Client(String name, String email, String birthDate) {
+	public Client(String name, String email, Date birthDate) {
 		super();
 		this.name = name;
 		this.email = email;
@@ -34,11 +34,11 @@ public class Client {
 		this.email = email;
 	}
 
-	public String getBirthDate() {
+	public Date getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(String birthDate) {
+	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
 	}
 
