@@ -8,4 +8,10 @@ public class Strings {
 		}
 		return ret;
 	}
+	
+	public String cipher(int key) {
+		String alphabet = "abcdefghijklmnopqrstuvwxyz";
+		String escr = alphabet.substring(key);
+		return escr + alphabet.substring(0,key);
+	}
 }
