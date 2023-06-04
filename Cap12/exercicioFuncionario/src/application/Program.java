@@ -44,7 +44,7 @@ public class Program {
 			HourContract c1 = new HourContract(date,valuePerHour,hours);
 			w1.addContract(c1);
 		}
-		SimpleDateFormat sdf2 = new SimpleDateFormat("MM/yyyy");
+		
 		System.out.println("Enter month and year to calculate income: (MM/yyyy) ");
 		String monthAndYear = sc.next();
 		int month = Integer.parseInt(monthAndYear.substring(0,2));
