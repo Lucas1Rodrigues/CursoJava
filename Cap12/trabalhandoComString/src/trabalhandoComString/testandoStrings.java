@@ -15,10 +15,9 @@ public class testandoStrings {
 		
 		//invertendo palavras
 		System.out.println(s1.reverse("Lucas Rodrigues"));
-		
 		String alphabet = "abcdefghijklmnopqrstuvwxyz";
 		System.out.println(alphabet);
-		System.out.println(s1.cipher(19));
+		System.out.println(s1.cipher(17));
 	
 		
 	}

@@ -14,4 +14,12 @@ public class Strings {
 		String escr = alphabet.substring(key);
 		return escr + alphabet.substring(0,key);
 	}
+	
+	public String breakCipher(String message) {
+		String alphabet = "abcdefghijklmnopqrstuvwxyz";
+		String a ;
+		if(alphabet.substring(1) == 
+		
+		
+	}
 }
