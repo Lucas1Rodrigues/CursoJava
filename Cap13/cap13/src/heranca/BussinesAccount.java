@@ -7,6 +7,24 @@ public class BussinesAccount extends Account {
 		super(balance, holder, number);
 		this.limit = limit;
 	}
+
+	public BussinesAccount() {
+		super();
+	}
+
+	public Double getLimit() {
+		return limit;
+	}
+
+	public void setLimit(Double limit) {
+		this.limit = limit;
+	}
+	
+	public void loan(Double loan) {
+		if(this.limit <= loan) {
+			this.balance += loan - 10;
+		}
+	}
 	
 	
 	
