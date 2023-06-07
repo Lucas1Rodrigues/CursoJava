@@ -3,18 +3,22 @@ package heranca;
 public class Application {
 
 	public static void main(String[] args) {
-		Account acc = new Account(0.0,"Alex",1001);
-		BussinesAccount bacc = new BussinesAccount(0.0, "Maria", 1002, 500.0);
+		Account acc1 = new SavingsAccount(1000.0, "Lucas", 1211, 0.01);
+		acc1.withdraw(500.0);
+		System.out.println(acc1.getBalance());
 		
-		// UPCASTING
-		Account acc1 = bacc;
-		Account acc2 = new BussinesAccount(0.0,"Bob",1003,1000.0);
-		//BussinesAccount acc3 = new Account(0.0, "Fulano",1004, 200.0);
-		acc2.setNumber(1010);
+		Account acc2 = new Account(1000.0,"Pedro",1232);
+		acc2.withdraw(500.0);
+		System.out.println(acc2.getBalance());
 		
-		//DOWNCASTING
-		System.out.println(acc1.getHolder());
-	
+		Account acc3 = new BussinesAccount(1000.0, "Luxx", 1222, 100.0);
+		acc3.withdraw(500.0);
+		System.out.println(acc3.getBalance());
+		
+		
+		
+		
+		
 	}
 
 }

@@ -42,7 +42,7 @@ public class Account {
 	
 	//especial methods
 	public void withdraw(Double amount) {
-			this.balance -= amount;
+			this.balance -= amount + 10;
 	}
 	public void deposit(Double amount) {
 		this.balance += amount;
