@@ -26,7 +26,8 @@ public class ImportedProduct extends Product {
 	}
 	
 	public Double totalPrice() {
-		Double total += this.price * this.customsFee;
+		Double total = null;
+		total += this.price * this.customsFee;
 		return total;
 	}
 	
