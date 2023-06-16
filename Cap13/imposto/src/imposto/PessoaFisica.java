@@ -14,13 +14,35 @@ public class PessoaFisica extends Contribuinte{
 		super(name, rendaAnual);
 		this.gastosComSaúde = gastosComSaúde;
 	}
+	
+	//getters and setters
+	
+	public Double getGastosComSaúde() {
+		return gastosComSaúde;
+	}
+
+
+	public void setGastosComSaúde(Double gastosComSaúde) {
+		this.gastosComSaúde = gastosComSaúde;
+	}
+
 
 	//especial method
 	@Override
 	public Double calculoImposto() {
-		return null;
+		Double imposto = 0.0;
+		if (this.rendaAnual < 20000.0) {
+			imposto = this.rendaAnual * 0.15;
+			imposto -= (this.gastosComSaúde)/2; 
+		}else {
+			imposto = this.rendaAnual * 0.25;
+			imposto -= this.gastosComSaúde/2;
+		}
+		return imposto;
 		
 	}
+	
+	
 	
 	
 
