@@ -28,8 +28,18 @@ public class PessoaJuridica extends Contribuinte {
 
 	@Override
 	public Double calculoImposto() {
-		// TODO Auto-generated method stub
-		return null;
+		Double imposto = 0.0;
+		if(this.numeroFuncionarios >= 10) {
+			imposto = this.rendaAnual * 0.14;
+		}else {
+			imposto = this.rendaAnual * 0.16;
+		}
+		return imposto;
 	}
+
+
+	@Override
+	public String toString() {
+		return   name + ": $" + calculoImposto();	}
 	
 }

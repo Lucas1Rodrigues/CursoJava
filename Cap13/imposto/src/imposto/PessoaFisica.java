@@ -38,9 +38,18 @@ public class PessoaFisica extends Contribuinte{
 			imposto = this.rendaAnual * 0.25;
 			imposto -= this.gastosComSaúde/2;
 		}
+		
 		return imposto;
 		
 	}
+
+	
+	@Override
+	public String toString() {
+		return   name + ": $" + calculoImposto();
+	}
+	
+	
 	
 	
 	
