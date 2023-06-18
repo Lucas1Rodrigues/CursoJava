@@ -33,6 +33,9 @@ public class Program {
 		catch(java.util.InputMismatchException e) {
 			System.out.println("try again, type correct data.");
 		}
+		catch(RuntimeException e) {
+			System.out.println("Unexpected error.");
+		}
 		
 		
 		

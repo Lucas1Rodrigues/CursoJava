@@ -51,6 +51,8 @@ public class Account {
 			throw new DomainException(" The amount exceeds withdraw limit");
 		}
 		
+		this.balance -= amount;
+		
 }
 	public void deposit(Double amount) {
 		
