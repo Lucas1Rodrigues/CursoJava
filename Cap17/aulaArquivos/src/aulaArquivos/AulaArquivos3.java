@@ -3,12 +3,11 @@ package aulaArquivos;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class AulaArquivos3 {
 	public static void main(String[] args) {
 		String path ="/home/lucas/eclipse/CursoJavaNelio/Cap17/in.txt";
-		Scanner sc = new Scanner(System.in);
+	
 			
 		try(BufferedReader br = new BufferedReader(new FileReader(path))){
 			String line = br.readLine();
