@@ -1,28 +1,33 @@
 package aulaArquivos;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class AulaArquivos6 {
 
-	public static void main(String[] args) {
+	
+
+	public static void main(String[] args) throws FileNotFoundException {
 		// Ler o arquivo tabuada.txt	
 		File path = new File("/home/lucas/eclipse/CursoJavaNelio/Cap17/tabuada.txt");
+		Scanner sc = new Scanner(path);
 		
-		try(BufferedReader br = new BufferedReader(new FileReader(path))){
-			String line = br.readLine();
-			
-			while(line != null) {
-				System.out.println(line);
-				br.readLine();
+		try {
+			while(sc.hasNextLine()) {
+				System.out.println(sc.nextLine());
 			}
 		}
-		catch(IOException e) {
-			System.out.println(" ERROR " + e.getMessage());
+		finally {
+			if(sc != null) {
+				sc.close();
+			}
 		}
 		
+	
+		
+		}
 	}
 
-}
+
