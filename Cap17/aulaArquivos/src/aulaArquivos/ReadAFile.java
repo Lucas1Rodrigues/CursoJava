@@ -23,10 +23,7 @@ public class ReadAFile {
 			while(line != null) {
 				System.out.println(line);
 				line = br.readLine();
-				String[] number = line.split("+");
-				int two = Integer.parseInt(number[0]);
-				int exponential = Integer.parseInt(number[1]);
-				System.out.println(two + "+" + exponential);
+				
 			}
 		}
 		catch (IOException e) {
