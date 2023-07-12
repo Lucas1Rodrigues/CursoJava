@@ -12,9 +12,12 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		
 		
-		System.out.println("Enter Circle or Rectangle (c/r)");
-		char shape = sc.next().charAt(0);
 		
+		boolean control = true;
+		
+		while(control) { 
+			System.out.println("Enter Circle or Rectangle (c/r)");
+			char shape = sc.next().charAt(0);
 		if(shape == 'C') {
 			System.out.println("Enter radius: ");
 			Double radius = sc.nextDouble();
@@ -26,7 +29,10 @@ public class Program {
 			System.out.println("Enter height: ");
 			Double height = sc.nextDouble();
 			Rectangle r = new Rectangle(width, height);
-			System.out.println("The circle area: " + r.area());
+			System.out.println("The Rectangle area: " + r.area());
+		}else if(shape!='C' || shape != 'R') {
+			System.err.println("Just type R or C characters in this program.");
 		}
+	}
 	}
 }
