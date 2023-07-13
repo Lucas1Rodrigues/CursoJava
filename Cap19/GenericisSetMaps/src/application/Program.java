@@ -1,18 +1,26 @@
 package application;
 
-import generics.MinhaClasee;
+import java.util.Iterator;
+import java.util.Scanner;
+
+import generics.PrintService;
 
 public class Program {
 
 	public static void main(String[] args) {
-		MinhaClasee<Integer> inteiro = new MinhaClasee<>(2);
-		MinhaClasee<Double>  real = new MinhaClasee<>(1.2);
+		PrintService<Integer> p = new PrintService<>();
 		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("How many values");
+		int n = sc.nextInt();
 		
+		for (int i = 0; i < n; i++) {
+			int value = sc.nextInt();
+			p.addValue(value);
+		}
 		
-		System.out.println(real.aoQuadrado(real));
-		System.out.println(inteiro.aoQuadrado(inteiro));
-		
+		System.out.println("first number: ");
+		p.printar();
 		
 	}
 
