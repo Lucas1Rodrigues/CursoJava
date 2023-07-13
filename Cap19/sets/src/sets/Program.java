@@ -11,8 +11,6 @@ public class Program {
 		set.add("Lucas");
 		set.add("Pedro");
 		set.add("Lucas");
-		set.add("Lucas");
-		set.add("Lucas");
 		set.add("Junin");
 		
 		set.remove("Lucas");
