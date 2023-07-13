@@ -15,9 +15,11 @@ public class Program1 {
 	c.addAll(b);
 	System.out.println(c);
 	
+	//intersection
 	Set<Integer> d = new TreeSet<>(a);
 	d.retainAll(b);
 	System.out.println(d);
+	
 	
 	
 	}
