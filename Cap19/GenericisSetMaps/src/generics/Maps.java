@@ -1,12 +1,12 @@
 package generics;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Maps {
 
 	public static void main(String[] args) {
-		Map<String, Integer> m1 = HashMap<String, Integer>();
-		
+		Map<String, Integer> m1 = new HashMap<>();
 		
 		m1.put("Lucas", 23);
 		m1.put("Felicia", 25);
