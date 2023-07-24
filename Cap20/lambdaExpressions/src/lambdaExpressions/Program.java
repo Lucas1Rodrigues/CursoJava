@@ -1,29 +1,26 @@
 package lambdaExpressions;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
-
-import entities.Product;
-import util.IncreasePrice;
-import util.SumOfPredicate;
+import java.util.stream.Stream;
 
 public class Program {
 
 	public static void main(String[] args) {
-		List<Product> list = new ArrayList<>();
-		list.add(new Product("Tv", 900.00));
-		list.add(new Product("Mouse", 50.00));
-		list.add(new Product("Tablet", 350.50));
-		list.add(new Product("HD Case", 80.90));
+		List <Integer> list = Arrays.asList(3,4,5,10,12);
+		Stream<Integer> st1 = list.stream().map(x -> x * 10);
 		
-		SumOfPredicate sp = new SumOfPredicate();
+		System.out.println(Arrays.toString(st1.toArray()));
+		
+		
+		Stream<String> st2 = Stream.of("Maria, Lucas, Pedro");
+		System.out.println(Arrays.toString(st2.toArray()));
+		
+		Stream<Integer> st3 = Stream.iterate(0,x -> x + 2);
+		System.out.println(Arrays.toString(st3.limit(10).toArray()));
 	
-		double sum = sp.filteredSum(list, p -> p.getPrice() >= 250);
-		
-		System.out.println("Sum = " + String.format("%.2f", sum));
-		
-		}
+	
+	}
 
 	}
 
