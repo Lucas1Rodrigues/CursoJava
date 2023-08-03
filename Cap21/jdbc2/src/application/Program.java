@@ -28,7 +28,7 @@ public class Program {
 				e.printStackTrace();
 			}
 		finally {
-			DB.CloseResultSet(rs);;
+			DB.CloseResultSet(rs);
 			DB.CloseStatement(st);
 			DB.closeConnection();
 		}
