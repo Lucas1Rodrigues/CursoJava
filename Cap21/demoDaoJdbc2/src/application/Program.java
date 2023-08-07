@@ -10,10 +10,8 @@ import model.entities.Seller;
 public class Program {
 
 	public static void main(String[] args) {
-		
-		Department obj = new Department(1,"Books");
-		
 		SellerDao sellerdao = DaoFactory.createSellerDao();
+		System.out.println("==== TEST 1: seller findbyId ====");
 		Seller seller = sellerdao.findById(1);
 		
 		System.out.println(seller);
