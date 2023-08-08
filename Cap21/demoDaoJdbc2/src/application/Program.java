@@ -31,9 +31,18 @@ public class Program {
 			System.out.println(obj);
 		}
 	
-	System.out.println("==== TEST 4: seller findAll ====\n");
+	System.out.println("==== TEST 4: seller Update ====\n");
 	Seller newSeller = new Seller(null,"Luan Rodrigues","LuanBarroso@gmail.com",new Date(),3200.0,department);
 	sellerdao.insert(newSeller);
 	System.out.println("Inserted! new id = " + newSeller.getId());
+	
+	System.out.println("==== TEST 5: seller update ====\n");
+	seller = sellerdao.findById(1);
+	seller.setName("Martha waine");
+	sellerdao.update(seller);
+	System.out.println("Update completed! ");
+	System.out.println(seller);
+	
 	}
+	
 }
