@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
-import model.dao.impl.SellerDaoImplJDBC;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -49,6 +48,9 @@ public class Program {
 	System.out.println("Enter a id: ");
 	int id = sc.nextInt();
 	sellerdao.DeleteById(id);
+	System.out.println("deleted completed!");
+	sc.close();
+	
 	}
 	
 }
